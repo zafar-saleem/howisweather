@@ -1,5 +1,5 @@
 # Weather Terminal App
-FC weather app is a terminal app that displays weather information.
+HowIsWeather is a terminal app that shows weather information.
 
 ## Installation
 
@@ -10,7 +10,7 @@ Soon to be available via npm.
 ## Usage
 
 ```javascript
-After installing, simply use the command "fc" in your terminal and you will see a popup where you have to enter the name of the city you want to see weather.
+After installing, simply use the command "howisweather" in your terminal and you will see a popup where you have to enter the name of the city you want to see weather.
 ```
 
 ## Closing / Exiting
