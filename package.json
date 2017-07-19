@@ -1,13 +1,14 @@
 {
   "name": "howisweather",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "howisweather.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zafar Saleem",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": "git://github.com/zafar-saleem/howisweather.git"
   "dependencies": {
     "blessed": "^0.1.81",
     "blessed-contrib": "^4.7.5",
