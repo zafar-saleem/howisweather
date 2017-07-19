@@ -1,0 +1,16 @@
+{
+  "name": "fc",
+  "version": "0.0.0",
+  "description": "",
+  "main": "fc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zafar Saleem",
+  "license": "ISC",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.7.5",
+    "weather-js": "^2.0.0"
+  }
+}
