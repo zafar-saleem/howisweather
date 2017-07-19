@@ -12,3 +12,9 @@ Soon to be available via npm.
 ```javascript
 After installing, simply use the command "fc" in your terminal and you will see a popup where you have to enter the name of the city you want to see weather.
 ```
+
+## Closing / Exiting
+
+```bash
+To close the app either use "escape" key or "q" to quit the app.
+```
