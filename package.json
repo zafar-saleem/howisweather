@@ -1,6 +1,6 @@
 {
   "name": "howisweather",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "howisweather.js",
   "scripts": {
@@ -8,6 +8,9 @@
   },
   "author": "Zafar Saleem",
   "license": "MIT",
+  "bin": {
+    "howisweather": "./howisweather.js"
+  },
   "repository": "git://github.com/zafar-saleem/howisweather.git",
   "dependencies": {
     "blessed": "^0.1.81",
