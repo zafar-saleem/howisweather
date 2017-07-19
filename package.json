@@ -8,7 +8,7 @@
   },
   "author": "Zafar Saleem",
   "license": "MIT",
-  "repository": "git://github.com/zafar-saleem/howisweather.git"
+  "repository": "git://github.com/zafar-saleem/howisweather.git",
   "dependencies": {
     "blessed": "^0.1.81",
     "blessed-contrib": "^4.7.5",
