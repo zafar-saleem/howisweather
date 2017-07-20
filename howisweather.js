@@ -220,10 +220,8 @@ let footer = blessed.box({
 });
 
 screen.key(['O', 'o'], (ch, key) => {
-    // showForm();
     screen.append(form);
     form.focus();
-    // screen.render();
 });
 
 // Quit on Escape, q, or Control-C.
