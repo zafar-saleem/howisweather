@@ -15,7 +15,7 @@ let form, submit;
 
 showForm();
 
-screen.title = 'Weather Forecast';
+screen.title = 'HowIsWeather';
 
 let todaysWeather = blessed.box({
     top: 'top',
