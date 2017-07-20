@@ -212,7 +212,7 @@ let footer = blessed.box({
     parent: screen,
     width: '100%',
     height: '5%',
-    top: '95%',
+    top: '96%',
     border: {
         type: 'line'
     },
