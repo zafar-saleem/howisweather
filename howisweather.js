@@ -216,7 +216,8 @@ let footer = blessed.box({
     border: {
         type: 'line'
     },
-    content: 'Press (O for Open) to enter another city.'
+    content: 'Press O(for Open) to enter another city. Press q (for quit) to quit application.',
+    fg: 'red'
 });
 
 screen.key(['O', 'o'], (ch, key) => {
