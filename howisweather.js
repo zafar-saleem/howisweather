@@ -208,9 +208,22 @@ function showForm() {
     screen.render();
 }
 
+let footer = blessed.box({
+    parent: screen,
+    width: '100%',
+    height: '5%',
+    top: '95%',
+    border: {
+        type: 'line'
+    },
+    content: 'Press (O for Open) to enter another city.'
+});
+
 screen.key(['O', 'o'], (ch, key) => {
-    showForm();
+    // showForm();
+    screen.append(form);
     form.focus();
+    // screen.render();
 });
 
 // Quit on Escape, q, or Control-C.
