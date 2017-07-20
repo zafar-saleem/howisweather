@@ -55,7 +55,7 @@ form.on('submit', data => {
             contents += ' ' + response.current.temperature + '°' + result[0].location.degreetype;
             contents += '\nFeels Like: ' + response.current.feelslike + '°' + result[0].location.degreetype;
             contents += '\n' + response.current.skytext;
-            contents += '\nHumidity: ' + response.current.humidity;
+            contents += '\nHumidity: ' + response.current.humidity + '%';
             contents += '\nWind Display: ' + response.current.winddisplay;
             contents += '\nWind Speed: ' + response.current.windspeed;
 
