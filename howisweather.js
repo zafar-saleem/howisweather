@@ -221,6 +221,7 @@ let footer = blessed.box({
 
 screen.key(['O', 'o'], (ch, key) => {
     screen.append(form);
+    form.reset();
     form.focus();
 });
 
