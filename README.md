@@ -1,5 +1,5 @@
 # Weather Terminal App
-HowIsWeather is a terminal app that shows weather information.
+HowIsWeather is a terminal app that shows weather information. This application is for those who is more fond of using terminal apps.
 
 ## Installation
 
