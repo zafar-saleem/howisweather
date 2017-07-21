@@ -18,3 +18,7 @@ After installing, simply use the command "howisweather" in your terminal and you
 ```bash
 To close the app either use "escape" key or "q" to quit the app.
 ```
+
+## Screenshot
+
+![alt text](https://github.com/zafar-saleem/howisweather/blob/master/screenshot.png)
