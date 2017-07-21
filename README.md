@@ -22,3 +22,6 @@ To close the app either use "escape" key or "q" to quit the app.
 ## Screenshot
 
 ![alt text](https://github.com/zafar-saleem/howisweather/blob/master/screenshot.png)
+
+## Note
+Mentioned on Show HN :-).
