@@ -25,3 +25,5 @@ To close the app either use "escape" key or "q" to quit the app.
 
 ## Note
 Mentioned on Show HN :-).
+https://news.ycombinator.com/item?id=14817432
+
