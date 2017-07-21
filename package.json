@@ -11,6 +11,7 @@
   "bin": {
     "howisweather": "./howisweather.js"
   },
+  "files": ["howisweather.js", "package.json", "README.md", "stats.json", ".gitignore"]
   "repository": "git://github.com/zafar-saleem/howisweather.git",
   "dependencies": {
     "blessed": "^0.1.81",
