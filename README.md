@@ -4,7 +4,7 @@ HowIsWeather is a terminal app that shows weather information. This application 
 ## Installation
 
 ```bash
-Soon to be available via npm.
+npm install howisweather -g
 ```
 
 ## Usage
