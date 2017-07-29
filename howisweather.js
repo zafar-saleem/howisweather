@@ -3,7 +3,7 @@
 const blessed = require('blessed');
 const weather = require('weather-js');
 const contrib = require('blessed-contrib');
-const stats = require('./stats.json');
+// const stats = require('./stats.json');
 const fs = require('fs');
 
 let screen = blessed.screen({
@@ -15,7 +15,7 @@ let form, submit;
 
 showForm();
 
-screen.title = 'HowIsWeather';
+screen.title = 'How is weather?';
 
 let todaysWeather = blessed.box({
     top: 'top',
@@ -124,22 +124,58 @@ form.on('submit', data => {
     });
 });
 
+let home = process.env['HOME'] + '/weatherStats.json';
+
 function readStats() {
     let date = new Date();
 
     return new Promise((resolve, reject) => {
-        stats.data.forEach((item, index) => {
-            if (index === date.getDay()) {
-                stats.data[index]++;
+        fs.open(home, 'r+', (err, fd) => {
+            if (err) {
 
-                fs.writeFile('./stats.json', JSON.stringify(stats), (err) => {
+                let statistics = {
+                    "titles": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                    "data": [0, 0, 0, 0, 0, 0, 0]
+                };
+
+                fs.writeFile(home, JSON.stringify(statistics), (err) => {
                     if (err) {
                         reject(err);
                     } else {
-                        resolve(stats);
+                        resolve(statistics);
                     }
                 });
+
+            } else {
+                readStatisticsFile().then(response => {
+                    let stats = JSON.parse(response);
+
+                    for (let i = 0; i < stats.data.length; i++) {
+                        if (i === date.getDay()) {
+                            stats.data[i]++;
+
+                            fs.writeFile(home, JSON.stringify(stats), (err) => {
+                                if (err) {
+                                    reject(err);
+                                } else {
+                                    resolve(stats);
+                                }
+                            });
+                        }
+                    }
+                }).catch(error => {
+                    console.log(error);
+                });
             }
+        });
+    });
+}
+
+function readStatisticsFile() {
+    return new Promise((resolve, reject) => {
+        fs.readFile(home, 'utf8', (err, data) => {
+            if (err) reject(err);
+            else resolve(data);
         });
     });
 }
