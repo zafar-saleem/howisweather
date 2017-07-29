@@ -3,7 +3,6 @@
 const blessed = require('blessed');
 const weather = require('weather-js');
 const contrib = require('blessed-contrib');
-// const stats = require('./stats.json');
 const fs = require('fs');
 
 let screen = blessed.screen({
