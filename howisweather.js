@@ -4,13 +4,14 @@ const blessed = require('blessed');
 const weather = require('weather-js');
 const contrib = require('blessed-contrib');
 const fs = require('fs');
+const opn = require('opn');
 
 let screen = blessed.screen({
     smartCSR: true,
     scrollable: true
 });
 
-let form, submit;
+let form, submit, city;
 
 showForm();
 
@@ -39,6 +40,8 @@ submit.on('press', () => {
 
 form.on('submit', data => {
     screen.remove(form);
+
+    city = data.CityName.replace(/ /g, '-');
 
     weather.find({
         search: data.CityName,
@@ -251,8 +254,12 @@ let footer = blessed.box({
     border: {
         type: 'line'
     },
-    content: 'Press O(for Open) to enter another city. Press q (for quit) to quit application.',
+    content: 'Press o(for Open) to enter another city. Press q (for quit) to quit application. Press w(for web) to open weather in website.',
     fg: 'red'
+});
+
+screen.key(['W', 'w'], (ch, key) => {
+    opn('https://www.msn.com/en-us/weather/today/' + city + '/we-city');
 });
 
 screen.key(['O', 'o'], (ch, key) => {

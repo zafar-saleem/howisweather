@@ -1,6 +1,6 @@
 {
   "name": "howisweather",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "",
   "main": "howisweather.js",
   "scripts": {
@@ -11,11 +11,19 @@
   "bin": {
     "howisweather": "./howisweather.js"
   },
-  "files": ["howisweather.js", "package.json", "README.md", "stats.json", ".gitignore", "screenshot.png"],
+  "files": [
+    "howisweather.js",
+    "package.json",
+    "README.md",
+    "stats.json",
+    ".gitignore",
+    "screenshot.png"
+  ],
   "repository": "git://github.com/zafar-saleem/howisweather.git",
   "dependencies": {
     "blessed": "^0.1.81",
     "blessed-contrib": "^4.7.5",
+    "opn": "^5.1.0",
     "weather-js": "^2.0.0"
   }
 }
